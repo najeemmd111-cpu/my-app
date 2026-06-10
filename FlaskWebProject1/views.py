@@ -35,3 +35,8 @@ def about():
         year=datetime.now().year,
         message='Your application description page.'
     )
+
+@app.route('/version')
+def version():
+    from flask import jsonify
+    return jsonify({"version": "1.0"})
